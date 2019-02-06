@@ -68,6 +68,16 @@ function registerModule(name) {
 })();
 
 
+/*----------libchat slider-----------*/
+(function () {
+    var lc = document.createElement('script');lc.type = 'text/javascript';lc.async = 'true';
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'region-eu.libanswers.com/load_chat.php?hash=cf1799572b0b3157a8ee72471190c327';
+    var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(lc, s);
+})();
+/*---------------libchat slider ends ---------------*/
+
+
+
 console.log("::FINISHED LOADING 44YORK CUSTOM::");
 
 // Generate a module consisting of all defined modules
