@@ -29,6 +29,17 @@ prm-logo{
     box-shadow: unset;
 }
 
+/*facet background */
+
+prm-facet-group button.section-title {
+	background: #00546E
+}
+/*facet text */
+
+prm-facet-group button.section-title div h3 {
+	color: #fff;	
+}
+
 
 /* Browse search colour*/
 
@@ -159,6 +170,70 @@ md-card-content > iframe {
 	padding-top: 10px;	
 	
 }
+
+/*Custom Footer*/
+/*- ### --- Primo Footer CSS ---- Code Originally from NLNZ --- ### */
+prm-explore-footer-after #footerWrapper {margin-top: 20px;}
+
+#footerWrapper {
+	background-color:#262F38;
+    position:relative;
+    z-index:1;
+}
+#footerWrapper .headline  {
+    font-size:16px;
+    font-weight:normal;
+    line-height:16px;
+    color:#ffffff;
+    margin-bottom:20px;
+}
+#footerWrapper > ul {
+    list-style: none outside none;
+    margin: 0 auto;
+    max-width:1200px;
+    overflow:hidden;
+    padding-top:30px;
+    padding-bottom:75px;
+    position:relative;
+    width: 100%;
+    border-bottom: 0px solid #ffffff;
+}
+#footerWrapper > ul li {
+    float:left;
+    width:33.3%;
+    margin-left: 12%;
+}
+#footerWrapper > ul li:first-child {
+    padding-left:0px;
+}
+
+.span {
+    padding-bottom: 10px;
+}
+.ftext {
+    font-size:16px;
+    font-weight:normal;
+    line-height:12px;
+    color:#ffffff;
+    margin-bottom:10px;
+}
+.ftext a {
+    color:#ffffff;
+    text-decoration: underline;
+}
+.ftext a:hover {
+    color:#1492C9;
+}
+@media screen and (max-width: 835px)  {
+#footerWrapper > ul li {
+    float:left;
+    width:auto;
+}
+#footerWrapper > ul li:first-child {
+    padding-left:0px;
+}
+}
+
 
 /*end peh customizations */
 

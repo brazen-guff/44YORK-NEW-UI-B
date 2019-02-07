@@ -8,7 +8,7 @@ console.log("::LOADING 44YORK CUSTOM::");
 
 var moduleList = [];
 
-// Please call this at the beinning of every new file, for documentation and possible future use
+// Please call this at the beginning of every new file, for documentation and possible future use
 function registerModule(name) {
   console.log("Registering " + name);
   moduleList.push(name);
@@ -20,6 +20,14 @@ function registerModule(name) {
   // This component was largely copied from NDU
 
   var app = angular.module('searchAlternatives', ['angularLoad']);
+  
+  /*Custom Footer*/
+/*- ### --- Primo Footer JS ---- Code Originally from NLNZ --- ### */
+app.component('prmExploreFooterAfter', {
+	bindings: { parentCtrl: '<' },
+	template: '<div id="footerWrapper"><ul><li><div class="ftext"><span class="headline">University Library</span><p>&nbsp;</p><p>University of York, Heslington, York, YO10 5DD, UK</p><p>Tel: +44 (0)1904 323838</p><p>&nbsp;</p></div></li><li><div class="ftext"><span class="headline">Library Links</span><p>&nbsp;</p><p><a href="mailto:lib-enquiry@york.ac.uk">Contact Us</a><p><a href="http://libanswers.york.ac.uk/" target="_blank">Get Help</a></p><p><a href="http://informationbookings.york.ac.uk/booking/studies">Book a Study Room</a></p></div></li></ul></div>'
+});
+  
   registerModule('searchAlternatives');
 
   app.controller('searchAlternativeController', ['angularLoad', '$scope', '$window', '$location', function (angularLoad, $scope, $window, $location) {
@@ -60,12 +68,21 @@ function registerModule(name) {
     };
   }]);
 
-  app.component('prmSearchBarAfter', {
+app.component('prmSearchBarAfter', {
     bindings: { parentCtrl: '<' },
     controller: 'searchAlternativeController',
     template: "\n      <div class=\"default-card zero-margin _md md-primoExplore-theme searchAlternatives\">\n          <div>\n          <p>\n            <div class=class=\"try-txt\"><strong>\n              Try your search in:\n            </strong></div>\n          </p>\n          <a\n            class=\"md-raised md-button md-primoExplore-theme md-ink-ripple\"\n            href={{worldcatLink}}\n            type=\"button\"\n            ng-click='setUrls()'\n            target='_blank'\n            aria-label=\"Search WorldCat\"\n          >\n            <div class=\"worldcatLogo\" alt=\"\"></div>\n          </a>\n          <a\n            class=\"md-raised md-button md-primoExplore-theme md-ink-ripple\"\n            href={{scholarLink}}\n            target='_blank'\n            type=\"button\"\n            ng-click='setUrls()'\n            aria-label=\"Search Google Scholar\"\n          >\n            <div class=\"scholarLogo\" alt=\"\"></div>\n          </a>\n          <a\n            class=\"md-raised md-button md-primoExplore-theme md-ink-ripple\"\n            href={{yewnoLink}}\n            target='_blank'\n            type=\"button\"\n            ng-click='setUrls()'\n            aria-label=\"Search Yewno\"\n          >\n            <div class=\"yewnoLogo\" alt=\"\"></div>\n          </a>\n          </div>\n      </div>\n    "
   });
+  
+  
+  console.log("Footer");
+  app.component('prm-explore-footer-after', {
+	bindings: { parentCtrl: '<' },
+    template: '\n      <div class=\"default-card zero-margin _md md-primoExplore-theme searchAlternatives\">\n   '
+});
+  
 })();
+
 
 
 /*----------libchat slider-----------*/
@@ -75,7 +92,6 @@ function registerModule(name) {
     var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(lc, s);
 })();
 /*---------------libchat slider ends ---------------*/
-
 
 
 console.log("::FINISHED LOADING 44YORK CUSTOM::");
